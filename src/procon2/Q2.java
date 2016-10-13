@@ -1,15 +1,13 @@
 package procon2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 public class Q2 {
 
-    private static final List<Character> CARD_LIST = Arrays.asList(new Character[] {
-            'A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K' });
+    private static final String CARD_LIST = "A234567890JQK";
 
     public static void main(String[] args) {
         try (
@@ -50,13 +48,13 @@ public class Q2 {
         }
 
         Collections.sort(cardNoList);
-        for (int i = 0, end = cardNoList.size(); i < end; i++) {
+        for (int i = 0; i < cardNoList.size(); i++) {
             if (i == 0) {
                 System.out.print(type + ":");
             } else {
                 System.out.print(",");
             }
-            System.out.print(CARD_LIST.get(cardNoList.get(i)));
+            System.out.print(CARD_LIST.charAt(cardNoList.get(i)));
         }
         System.out.println();
     }

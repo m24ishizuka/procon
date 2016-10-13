@@ -28,7 +28,7 @@ public class Q1 {
             if (buyList.size() == 0) {
                 System.out.println("None");
             } else {
-                for (int i = 0, end = buyList.size(); i < end; i++) {
+                for (int i = 0; i < buyList.size(); i++) {
                     if (i > 0) {
                         System.out.print(" ");
                     }
@@ -46,11 +46,11 @@ public class Q1 {
         List<Integer> list = new ArrayList<>();
 
         // 1桁目が0でなければ変換する
-        if (strs[0] != "0") {
+        if ("0".equals(strs[0])) {
             for (String str : strs) {
-                Integer toInteger = Integer.parseInt(str);
+                int toInteger = Integer.parseInt(str);
                 if (toInteger <= max) {
-                    list.add(Integer.parseInt(str));
+                    list.add(toInteger);
                 }
             }
         }
