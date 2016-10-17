@@ -33,7 +33,8 @@ public class Q4 {
                 int endI = 0;
                 while (matcher.find()) {
                     endI = matcher.start();
-                    write(line.substring(startI, endI));
+                    String str = line.substring(startI, endI);
+                    write(str);
                     startI = matcher.end();
                     String cmd = matcher.group();
                     move(cmd);
