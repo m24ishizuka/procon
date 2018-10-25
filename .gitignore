@@ -1,0 +1,4 @@
+/bin/
+/src/*.java
+.classpath
+.project
